@@ -1,0 +1,21 @@
+{
+  "name": "react-express-app",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Brad Searle <bradley.c.searle@accenture.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^0.14.7"
+  }
+}
