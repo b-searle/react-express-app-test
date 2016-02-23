@@ -13,5 +13,9 @@ module.exports = function (app) {
   app.route('/api/items')
     .get(function(req, res) {
       res.send(items);
+    })
+    .post(function(req, res) {
+      var newItem = req.body;
+      items.push(newItem);
     });
 }

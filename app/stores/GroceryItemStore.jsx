@@ -29,6 +29,8 @@ function GroceryItemStore() {
   function addGroceryItem(item) {
     items.push(item);
     triggerListeners();
+
+    helper.post("api/items", item); // Could add error handling here, but screw it.
   }
 
   function deleteGroceryItem(item) {
