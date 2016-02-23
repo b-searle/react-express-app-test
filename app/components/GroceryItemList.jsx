@@ -1,4 +1,4 @@
-var React = require('react/addons');
+var React = require('react');
 
 module.exports = React.createClass({
   render: function() {
@@ -6,6 +6,6 @@ module.exports = React.createClass({
       <div>
         <h1>Grocery Listify</h1>
       </div>
-    )
+    );
   }
-})
+});
