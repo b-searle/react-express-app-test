@@ -1,5 +1,7 @@
 var React = require('react');
 
+var GroceryItem = require('./GroceryItem.jsx');
+
 module.exports = React.createClass({
   render: function() {
     return (
@@ -9,10 +11,7 @@ module.exports = React.createClass({
           {
             this.props.items.map(function(item, index) {
               return (
-                <div>
-                <input type="checkbox" checked={item.purchased} />
-                {item.name}
-                </div>
+                <GroceryItem item={item} key={"item"+index} />
               )
             })
           }
