@@ -4,7 +4,7 @@ module.exports = React.createClass({
   render: function() {
     return (
       <div>
-      <input type="checkbox" checked={this.props.item.purchased} />
+      <input type="checkbox" checked={this.props.item.purchased} readOnly />
       <h4 className={this.props.item.purchased ? "strikethrough" : ""}>{this.props.item.name}</h4>
       </div>
     );
