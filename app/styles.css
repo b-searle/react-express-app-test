@@ -1,0 +1,9 @@
+.strikethrough {
+  color: red;
+  font-style:italic;
+  text-decoration: line-through;
+}
+
+h4 {
+  display: inline;
+}

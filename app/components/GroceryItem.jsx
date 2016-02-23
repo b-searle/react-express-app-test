@@ -5,7 +5,7 @@ module.exports = React.createClass({
     return (
       <div>
       <input type="checkbox" checked={this.props.item.purchased} />
-      {this.props.item.name}
+      <h4 className={this.props.item.purchased ? "strikethrough" : ""}>{this.props.item.name}</h4>
       </div>
     );
   }
