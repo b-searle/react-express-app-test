@@ -1,7 +1,18 @@
 var dispatcher = require('../dispatcher.js');
 
 function GroceryItemStore() {
-  var items = [];
+  // var items = [];
+  var items = [{
+    name: "ice cream"
+  }, {
+    name: "waffles"
+  },{
+    name: "candy",
+    purchased: true
+  },{
+    name: "pepsi"
+  }];
+
   var listeners = [];
 
   function getItems() {
@@ -19,7 +30,7 @@ function GroceryItemStore() {
 
   function triggerListeners() {
     listeners.forEach(function(listener) {
-      listener(groceryItems);
+      listener(items);
     });
   }
 
