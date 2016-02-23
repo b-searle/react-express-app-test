@@ -24,6 +24,22 @@ function GroceryItemStore() {
     triggerListeners();
   }
 
+  function deleteGroceryItem(item) {
+    // ES6 - works in Chrome, maybe not other browsers.
+    var index = items.findIndex(function(_item) {
+      return _item.name == item.name;
+    });
+    // ES5 - works everywhere
+    /*var index;
+    items.filter(function(_item, _index) {
+      if(item.name == _item.name) {
+        index = _index;
+      }
+    });*/
+    items.splice(index,1);
+    triggerListeners();
+  }
+
   function onChange(listener) {
     listeners.push(listener);
   }
@@ -40,6 +56,9 @@ function GroceryItemStore() {
       switch(split[1]) {
         case 'add':
           addGroceryItem(event.payload);
+          break;
+        case 'delete':
+          deleteGroceryItem(event.payload);
           break;
       }
     }
