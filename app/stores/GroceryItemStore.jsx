@@ -47,12 +47,16 @@ function GroceryItemStore() {
     });*/
     items.splice(index,1);
     triggerListeners();
+
+    helper.del("api/items/"+item._id);
   }
 
   function setGroceryItemBought(item, bought) {
     var _item = items.filter(function(a){ return a.name == item.name})[0];
     _item.purchased = bought || false;
     triggerListeners();
+
+    helper.patch("api/items/"+item._id, _item);
   }
 
   function onChange(listener) {
